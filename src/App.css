@@ -1,0 +1,180 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #20243a;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(720px, 92%);
+  margin: 60px auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: #6558d3;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(30px, 6vw, 44px);
+}
+
+.subtitle {
+  color: #74798c;
+}
+
+.task-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px #26335a12;
+}
+
+.task-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.task-summary h2 {
+  margin: 0 0 6px;
+}
+
+.task-summary p {
+  color: #74798c;
+  margin: 0;
+  font-size: 14px;
+}
+
+.task-count {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #eeebff;
+  color: #6558d3;
+  font-weight: bold;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #dfe2ec;
+  border-radius: 10px;
+  outline-color: #6558d3;
+}
+
+.task-form button {
+  background: #6558d3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-wrap: anywhere;
+}
+
+.task-label input {
+  accent-color: #6558d3;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.task-title.completed {
+  color: #9a9dad;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  background: #fff0f0;
+  color: #d64545;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 35px 10px;
+  color: #74798c;
+}
+
+.empty-state span {
+  font-size: 38px;
+}
+
+.empty-state h3 {
+  color: #20243a;
+  margin-bottom: 5px;
+}
+
+.footer-note {
+  margin-top: 24px;
+  text-align: center;
+  color: #8a8fa0;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .app {
+    margin: 30px auto;
+  }
+
+  .task-card {
+    padding: 20px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+}
